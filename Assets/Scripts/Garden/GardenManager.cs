@@ -68,4 +68,13 @@ public class GardenManager : MonoBehaviour
 
         sceneLoader.SaveGarden(dataList);
     }
+
+    public void RemovePlant(Plant plant)
+    {
+        if (currentPlants.Contains(plant))
+        {
+            currentPlants.Remove(plant);
+            Destroy(plant.gameObject);
+        }
+    }
 }
